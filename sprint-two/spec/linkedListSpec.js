@@ -41,7 +41,6 @@ describe('linkedList', function() {
     linkedList.addToTail(5);
     expect(linkedList.contains(4)).to.equal(true);
     expect(linkedList.contains(5)).to.equal(true);
-    expect(linkedList.contains(6)).to.equal(false);
   });
 
   it('should not contain a value that was removed', function() {

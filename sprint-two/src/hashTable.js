@@ -28,25 +28,6 @@ HashTable.prototype.insert = function(k, v) {
   // this._storage.set(5, [2]);
 
 
-
-  //get what is currently in the storage array in helper
-  //update the storage array to include the new value pair
-  //get the updated storage array and reset the hash index value
-
-
-  // //index is not in the has table yet
-  // if ((this._storage.get(index)) === null) {
-  //   this._storage[index].set(index, '[k, v]');
-  // }
-
-  // // this._storage[index] = this._storage.get(index);
-  // var bracket = [];
-
-  // // var tuples = this._storage.get(index).push([k, v]);
-
-  // // this._storage[index] = [[k, v]];
-
-
   //-----------------------------------------------------------//
   //if its a new hash index, just set the value by creating a bracket array and adding another  [key, value] array
   if (this._storage[index] === undefined) {
@@ -70,9 +51,6 @@ HashTable.prototype.insert = function(k, v) {
         bracketArray.push([k, v]);
       }
     }
-
-    //get the updated bracket array with the new key value and then you reset it
-    this._storage.set(index, bracketArray);
   }
   //at the hash index you reassign it the new updated bracket
   this._storage[index] = this._storage.get(index);
